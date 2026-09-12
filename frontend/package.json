@@ -1,0 +1,21 @@
+{
+  "name": "aivoa-complaint-copilot-web",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 0.0.0.0",
+    "build": "vite build",
+    "preview": "vite preview --host 0.0.0.0"
+  },
+  "dependencies": {
+    "@reduxjs/toolkit": "^2.5.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "react-redux": "^9.2.0",
+    "vite": "^6.1.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.4.1"
+  }
+}

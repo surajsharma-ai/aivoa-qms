@@ -1,0 +1,14 @@
+fastapi==0.115.6
+uvicorn[standard]==0.34.0
+python-multipart==0.0.20
+sqlalchemy==2.0.37
+psycopg[binary]==3.2.3
+pydantic-settings==2.7.1
+langgraph==0.2.62
+langchain-core==0.3.34
+langchain-groq==0.2.4
+python-dotenv==1.0.1
+pypdf==5.4.0
+pymupdf==1.25.3
+pytesseract==0.3.13
+Pillow==11.1.0

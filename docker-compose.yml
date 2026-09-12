@@ -1,0 +1,31 @@
+services:
+  db:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_USER: qms
+      POSTGRES_PASSWORD: qms
+      POSTGRES_DB: aivoa_qms
+    ports:
+      - "5432:5432"
+    volumes:
+      - qms-postgres:/var/lib/postgresql/data
+  api:
+    build: ./backend
+    environment:
+      DATABASE_URL: postgresql+psycopg://qms:qms@db:5432/aivoa_qms
+      GROQ_API_KEY: ${GROQ_API_KEY:-}
+      GROQ_MODEL: gemma2-9b-it
+    ports:
+      - "8000:8000"
+    depends_on:
+      - db
+  web:
+    build: ./frontend
+    environment:
+      VITE_API_TARGET: http://api:8000
+    ports:
+      - "5173:5173"
+    depends_on:
+      - api
+volumes:
+  qms-postgres:

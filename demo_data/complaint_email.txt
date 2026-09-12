@@ -1,0 +1,10 @@
+From: quality@apollo-pharmacy.example
+To: complaints@acme-pharma.example
+Subject: Complaint - loose caps on Amoxicillin 500 mg capsules
+
+Hello Quality Team,
+
+We received twelve packs of Amoxicillin 500 mg Capsules from batch AMX-2403-17. Several bottle caps were loose and powder residue was visible on the outside of the cartons. No patient injury has been reported. Please advise on replacement and investigation. A market sample and photographs can be made available.
+
+Regards,
+Apollo Pharmacy Quality Team
