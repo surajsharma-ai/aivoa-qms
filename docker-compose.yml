@@ -14,6 +14,7 @@ services:
       interval: 5s
       timeout: 5s
       retries: 10
+
   api:
     build: ./backend
     environment:
@@ -24,8 +25,9 @@ services:
     ports:
       - "8000:8000"
     depends_on:
-      - db
-      condition: service_healthy
+      db:
+        condition: service_healthy
+
   web:
     build: ./frontend
     environment:
@@ -34,5 +36,6 @@ services:
       - "5173:5173"
     depends_on:
       - api
+
 volumes:
   qms-postgres:
